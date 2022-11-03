@@ -1,2 +1,2 @@
 # Hangman-Project
-Code for Hangman game
+The code for hangman game
