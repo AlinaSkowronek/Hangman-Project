@@ -32,206 +32,199 @@ int main() {
         cout << "Good luck :)\n" << endl;
     }
     
-    do {
-        // Title
-        cout << "           -";
+    // Title
+    cout << "           -";
 
-        for (int i = 0; i < 15; i++) {
-            cout << "-";
-        }
-        cout << "\n          |     Hangman     |" << endl;
-        cout << "           -";
+    for (int i = 0; i < 15; i++) {
+        cout << "-";
+    }
+    cout << "\n          |     Hangman     |" << endl;
+    cout << "           -";
 
-        for (int i = 0; i < 15; i++) {
-            cout << "-";
-        }
-        // Create starting gallow
-        cout << "\n\n           -";
+    for (int i = 0; i < 15; i++) {
+        cout << "-";
+    }
+    // Create starting gallow
+    cout << "\n\n           -";
 
-        for (int i = 0; i < 15; i++ ) {
-            cout << "-";
-        }
-        cout << "|" << endl;
-        cout << "           |               |" << endl;
+    for (int i = 0; i < 15; i++ ) {
+        cout << "-";
+    }
+    cout << "|" << endl;
+    cout << "           |               |" << endl;
 
-        for(int i = 0; i < 10; i++) {
-            cout << "           |" << endl;
-        }
-        cout << "  -";
+    for(int i = 0; i < 10; i++) {
+        cout << "           |" << endl;
+    }
+    cout << "  -";
 
-        for (int i = 0; i < 16; i++) {
-            cout << "-";
-        }
-    
+    for (int i = 0; i < 16; i++) {
+        cout << "-";
+    }
 
-        string hide_h(word.length(), '-');
-        cout << "\n\n";
-        while (tries != 0) {
-            home_menu();
-            cout << hide_h;
-            cout << "\nPlease guess a letter: ";
-            cin.ignore();
-            cin.get(letter);
-            
-            if (checkGuess(letter, word, hide_h) == 0) {
-                cout << "\nIncorrect letter.";
-                tries = tries - 1;
-                
-                    do {
-                        
-                        if (tries == 6) {
-                            cout << "\n\n           -";
-                            for (int i = 0; i < 15; i++ ) {
-                                cout << "-";
-                            }
-                            cout << "|" << endl;
-                            cout << "           |               |" << endl;
-                            cout << "           |               O" << endl;
-                            for(int i = 0; i < 9; i++) {
-                                cout << "           |" << endl;
-                            }
-                            cout << "  -";
-                            for (int i = 0; i < 16; i++) {
-                                cout << "-";
-                            }
-                        }
 
-                        else if (tries == 5){
-                            cout << "\n\n           -";
-                            for (int i = 0; i < 15; i++ ) {
-                                cout << "-";
-                            }
-                            cout << "|" << endl;
-                            cout << "           |               |" << endl;
-                            cout << "           |               O" << endl;
-                            cout << "           |               |" << endl;
-                            for(int i = 0; i < 8; i++) {
-                                cout << "           |" << endl;
-                            }
-                            cout << "  -";
-                            for (int i = 0; i < 16; i++) {
-                                cout << "-";
-                            }
-                        }
-                        
-                        else if (tries == 4){
-                            cout << "\n\n           -";
-                            for (int i = 0; i < 15; i++ ) {
-                                cout << "-";
-                            }
-                            cout << "|" << endl;
-                            cout << "           |               |" << endl;
-                            cout << "           |               O" << endl;
-                            cout << "           |              /|" << endl;
-                            for(int i = 0; i < 7; i++) {
-                                cout << "           |" << endl;
-                            }
-                            cout << "  -";
-                            for (int i = 0; i < 16; i++) {
-                                cout << "-";
-                            }
-                        }
-
-                        else if (tries == 3){
-                            cout << "\n\n           -";
-                            for (int i = 0; i < 15; i++ ) {
-                                cout << "-";
-                            }
-                            cout << "|" << endl;
-                            cout << "           |               |" << endl;
-                            cout << "           |               O" << endl;
-                            cout << "           |              /|\\" << endl;
-                            for(int i = 0; i < 6; i++) {
-                                cout << "           |" << endl;
-                            }
-                            cout << "  -";
-                            for (int i = 0; i < 16; i++) {
-                                cout << "-";
-                            }
-                        }
-
-                        else if (tries == 2){
-                            cout << "\n\n           -";
-                            for (int i = 0; i < 15; i++ ) {
-                                cout << "-";
-                            }
-                            cout << "|" << endl;
-                            cout << "           |               |" << endl;
-                            cout << "           |               O" << endl;
-                            cout << "           |              /|\\" << endl;
-                            cout << "           |               |" << endl;
-                            for(int i = 0; i < 5; i++) {
-                                cout << "           |" << endl;
-                            }
-                            cout << "  -";
-                            for (int i = 0; i < 16; i++) {
-                                cout << "-";
-                            }
-                        }
-
-                        else if (tries == 1){
-                            cout << "\n\n           -";
-                            for (int i = 0; i < 15; i++ ) {
-                                cout << "-";
-                            }
-                            cout << "|" << endl;
-                            cout << "           |               |" << endl;
-                            cout << "           |               O" << endl;
-                            cout << "           |              /|\\" << endl;
-                            cout << "           |               |" << endl;
-                            cout << "           |              / " << endl;
-                            for(int i = 0; i < 4; i++) {
-                                cout << "           |" << endl;
-                            }
-                            cout << "  -";
-                            for (int i = 0; i < 16; i++) {
-                                cout << "-";
-                            }  
-                        }
-
-                        else {
-                            cout << "\n\n           -";
-                            for (int i = 0; i < 15; i++ ) {
-                                cout << "-";
-                            }
-                            cout << "|" << endl;
-                            cout << "           |               |" << endl;
-                            cout << "           |               O" << endl;
-                            cout << "           |              /|\\" << endl;
-                            cout << "           |               |" << endl;
-                            cout << "           |              / \\" << endl;
-                            for(int i = 0; i < 3; i++) {
-                                cout << "           |" << endl;
-                            }
-                            cout << "  -";
-                            for (int i = 0; i < 16; i++) {
-                                cout << "-";
-                            }  
-                        }
-                    } while (tries == 7);
-                    
-            }
-            
-            else cout << "\nCorrect! You guessed a letter";
+    string hide_h(word.length(), '-');
+    cout << "\n\n";
+    while (tries != 0) {
+        home_menu();
+        cout << hide_h;
+        cout << "\nPlease guess a letter: ";
+        cin.ignore();
+        cin.get(letter);
         
-            if (word == hide_h) {
-                cout << "\nCongratulations! You guessed the word!";
-                home_menu();
-                cout << "\nThe word was: " << word << endl;
-                break;
-            }
+        if (checkGuess(letter, word, hide_h) == 0) {
+            cout << "\nIncorrect letter.";
+            tries = tries - 1;
+            
+                do {
+                    
+                    if (tries == 6) {
+                        cout << "\n\n           -";
+                        for (int i = 0; i < 15; i++ ) {
+                            cout << "-";
+                        }
+                        cout << "|" << endl;
+                        cout << "           |               |" << endl;
+                        cout << "           |               O" << endl;
+                        for(int i = 0; i < 9; i++) {
+                            cout << "           |" << endl;
+                        }
+                        cout << "  -";
+                        for (int i = 0; i < 16; i++) {
+                            cout << "-";
+                        }
+                    }
+
+                    else if (tries == 5){
+                        cout << "\n\n           -";
+                        for (int i = 0; i < 15; i++ ) {
+                            cout << "-";
+                        }
+                        cout << "|" << endl;
+                        cout << "           |               |" << endl;
+                        cout << "           |               O" << endl;
+                        cout << "           |               |" << endl;
+                        for(int i = 0; i < 8; i++) {
+                            cout << "           |" << endl;
+                        }
+                        cout << "  -";
+                        for (int i = 0; i < 16; i++) {
+                            cout << "-";
+                        }
+                    }
+                    
+                    else if (tries == 4){
+                        cout << "\n\n           -";
+                        for (int i = 0; i < 15; i++ ) {
+                            cout << "-";
+                        }
+                        cout << "|" << endl;
+                        cout << "           |               |" << endl;
+                        cout << "           |               O" << endl;
+                        cout << "           |              /|" << endl;
+                        for(int i = 0; i < 7; i++) {
+                            cout << "           |" << endl;
+                        }
+                        cout << "  -";
+                        for (int i = 0; i < 16; i++) {
+                            cout << "-";
+                        }
+                    }
+
+                    else if (tries == 3){
+                        cout << "\n\n           -";
+                        for (int i = 0; i < 15; i++ ) {
+                            cout << "-";
+                        }
+                        cout << "|" << endl;
+                        cout << "           |               |" << endl;
+                        cout << "           |               O" << endl;
+                        cout << "           |              /|\\" << endl;
+                        for(int i = 0; i < 6; i++) {
+                            cout << "           |" << endl;
+                        }
+                        cout << "  -";
+                        for (int i = 0; i < 16; i++) {
+                            cout << "-";
+                        }
+                    }
+
+                    else if (tries == 2){
+                        cout << "\n\n           -";
+                        for (int i = 0; i < 15; i++ ) {
+                            cout << "-";
+                        }
+                        cout << "|" << endl;
+                        cout << "           |               |" << endl;
+                        cout << "           |               O" << endl;
+                        cout << "           |              /|\\" << endl;
+                        cout << "           |               |" << endl;
+                        for(int i = 0; i < 5; i++) {
+                            cout << "           |" << endl;
+                        }
+                        cout << "  -";
+                        for (int i = 0; i < 16; i++) {
+                            cout << "-";
+                        }
+                    }
+
+                    else if (tries == 1){
+                        cout << "\n\n           -";
+                        for (int i = 0; i < 15; i++ ) {
+                            cout << "-";
+                        }
+                        cout << "|" << endl;
+                        cout << "           |               |" << endl;
+                        cout << "           |               O" << endl;
+                        cout << "           |              /|\\" << endl;
+                        cout << "           |               |" << endl;
+                        cout << "           |              / " << endl;
+                        for(int i = 0; i < 4; i++) {
+                            cout << "           |" << endl;
+                        }
+                        cout << "  -";
+                        for (int i = 0; i < 16; i++) {
+                            cout << "-";
+                        }  
+                    }
+
+                    else {
+                        cout << "\n\n           -";
+                        for (int i = 0; i < 15; i++ ) {
+                            cout << "-";
+                        }
+                        cout << "|" << endl;
+                        cout << "           |               |" << endl;
+                        cout << "           |               O" << endl;
+                        cout << "           |              /|\\" << endl;
+                        cout << "           |               |" << endl;
+                        cout << "           |              / \\" << endl;
+                        for(int i = 0; i < 3; i++) {
+                            cout << "           |" << endl;
+                        }
+                        cout << "  -";
+                        for (int i = 0; i < 16; i++) {
+                            cout << "-";
+                        }  
+                    }
+                } while (tries == 7);
+                
         }
-        if (tries == 0) {
-            cout << "\nOn no! Our friend has been hanged.";
+        
+        else cout << "\nCorrect! You guessed a letter";
+    
+        if (word == hide_h) {
+            cout << "\nCongratulations! You guessed the word!";
             home_menu();
             cout << "\nThe word was: " << word << endl;
+            break;
         }
-
-        // Check for a desire to play again
-        cout << "Do you want to play again? Y|N: ";
-        cin >> choice;
-        choice = toupper('y');
-    } while (choice == 'Y');
+    }
+    if (tries == 0) {
+        cout << "\nOn no! Our friend has been hanged.";
+        home_menu();
+        cout << "\nThe word was: " << word << endl;
+    }
 
 	cin.ignore();
 	cin.get();		//access the array
