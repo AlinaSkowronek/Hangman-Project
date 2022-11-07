@@ -1,3 +1,7 @@
+/* Hangman Game
+ * Alina Skowroenk, Ainslee Cole
+ 
+*/
 #include <iostream>
 #include <string>
 #include <ctime>
