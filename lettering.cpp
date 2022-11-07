@@ -264,5 +264,5 @@ int checkGuess(char guess, string hiddenholiday, string& holidayguess) {
 	return matches;
 }
 void home_menu() {
-	cout << "You have " << tries << " tries left." << endl;
+	cout << "\nYou have " << tries << " tries left." << endl;
 }
