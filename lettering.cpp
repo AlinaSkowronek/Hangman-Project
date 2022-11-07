@@ -72,7 +72,7 @@ int main() {
 			tries = tries - 1;
                 do {
                     
-                    if (tries == 7) {
+                    if (tries == 6) {
                         cout << "\n\n           -";
                         for (int i = 0; i < 15; i++ ) {
                             cout << "-";
@@ -89,7 +89,7 @@ int main() {
                         }
                     }
 
-                    else if (tries == 6){
+                    else if (tries == 5){
                         cout << "\n\n           -";
                         for (int i = 0; i < 15; i++ ) {
                             cout << "-";
@@ -107,7 +107,7 @@ int main() {
                         }
                     }
                     
-                    else if (tries == 5){
+                    else if (tries == 4){
                         cout << "\n\n           -";
                         for (int i = 0; i < 15; i++ ) {
                             cout << "-";
@@ -125,7 +125,7 @@ int main() {
                         }
                     }
 
-                    else if (tries == 4){
+                    else if (tries == 3){
                         cout << "\n\n           -";
                         for (int i = 0; i < 15; i++ ) {
                             cout << "-";
@@ -143,7 +143,7 @@ int main() {
                         }
                     }
 
-                    else if (tries == 3){
+                    else if (tries == 2){
                         cout << "\n\n           -";
                         for (int i = 0; i < 15; i++ ) {
                             cout << "-";
@@ -162,7 +162,7 @@ int main() {
                         }
                     }
 
-                    else if (tries == 2){
+                    else if (tries == 1){
                         cout << "\n\n           -";
                         for (int i = 0; i < 15; i++ ) {
                             cout << "-";
