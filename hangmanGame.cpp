@@ -14,6 +14,8 @@ int main() {
     char choice; // Choice user makes (Y or N) to play the game or not
     string userFriendName; // The name of the friend the user enters
     char userLetterGuess; // The letter the user types in to guess the word
+    int tries = 7;
+    string christmas;
 
     // Welcome screen to ask user if they would like to play
     cout << "Welcome to Hangman!" << endl;
@@ -27,7 +29,7 @@ int main() {
         cout << "Your job is to guess the name of the holiday in 7 tries or less." << endl;
         cout << "If you use more than 7 tries, your friend will be hung!" << endl;
         cout << "Good luck :)\n" << endl;
-        cout << "Before the game starts enter the name of your friend here: ";
+        cout << "Before the game starts enter a 7 letter name of your friend here: ";
         cin >> userFriendName;
 
         // Title
@@ -60,6 +62,30 @@ int main() {
     do {
         cout << "\nType in a letter: "; 
         cin >> userLetterGuess;
+        userLetterGuess = tries;
+
+        if(tries == false) {
+        cout << "\n\n           -";
+
+            for (int i = 0; i < 15; i++ ) {
+                cout << "-";
+            }
+
+            cout << "|" << endl;
+            cout << "           |               |" << endl;
+            cout << "           |               O" << endl;
+
+            for(int i = 0; i < 9; i++) {
+                cout << "           |" << endl;
+            }
+
+            cout << "  -";
+
+            for (int i = 0; i < 16; i++) {
+                cout << "-";
+            }
+            cout << "Incorrect guess, try again!" << endl;
+        }
     }
     while (choice == 'y');
 }
