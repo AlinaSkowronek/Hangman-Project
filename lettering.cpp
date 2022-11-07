@@ -5,6 +5,7 @@
 using namespace std;
 
 int tries = 7;
+char choice; // Choice user makes (Y or N) to play the game or not
 void home_menu();
 int checkGuess(char, string, string&);
 
@@ -18,6 +19,45 @@ int main() {
 	int h = rand() % 12;
 	word = holiday[h];
 
+    // Welcome screen to ask user if they would like to play
+    cout << "Welcome to Hangman!" << endl;
+    cout << "Would you like to play a game? |Y/N|: ";
+    cin >> choice;
+    choice = toupper('y');
+
+    // if user types in 'Y' the directions will be displayed
+    if (choice == 'Y') {
+        cout << "In this game a random holiday will be chosen." << endl;
+        cout << "Your job is to guess the name of the holiday in 7 tries or less." << endl;
+        cout << "If you use more than 7 tries, your friend will be hung!" << endl;
+        cout << "Good luck :)\n" << endl;
+    
+        // Title
+        cout << "           -";
+        for (int i = 0; i < 15; i++) {
+            cout << "-";
+        }
+        cout << "\n          |     Hangman     |" << endl;
+        cout << "           -";
+        for (int i = 0; i < 15; i++) {
+            cout << "-";
+        }
+        // Create starting gallow
+        cout << "\n\n           -";
+        for (int i = 0; i < 15; i++ ) {
+            cout << "-";
+        }
+        cout << "|" << endl;
+        cout << "           |               |" << endl;
+
+        for(int i = 0; i < 10; i++) {
+            cout << "           |" << endl;
+        }
+        cout << "  -";
+        for (int i = 0; i < 16; i++) {
+            cout << "-";
+        }
+    }
 
 	string hide_h(word.length(), '-');
 	cout << "\n\n";
