@@ -1,3 +1,14 @@
+/* Hangman
+* Ainslee Cole, Alina Skowronek
+* October 31 - November 11, 2022
+* Purpose:
+*	Create a hangman game to guess the random hidden holiday. 
+*	Create a loop to guess a letter and fill in the blank.
+*	Create code to display a body part if users guess was incorrect.
+*	Create the body and stand for the Hangman
+*	Create a loop to ask user if they want to play again.
+*/
+
 #include <iostream>
 #include <string>
 #include <ctime>
@@ -5,15 +16,15 @@ using namespace std;
 
 int tries = 7;
 char choice; // Choice user makes (Y or N) to play the game or not
-void home_menu();
-int checkGuess(char, string, string&);
+void home_menu(); // Goes to start of loop.
+int checkGuess(char, string, string&); // Checks to see if guess/letter matches the word.
 
 int main() {
 	string word;
 	char letter; // The letter the user types in to guess the word
 	string holiday[18]{ "april fools day", "christmas", "cinco de mayo", "columbus day", "easter", "fathers day", "halloween", "independence day", "labor day",
 			"martin luther king jr day", "memorial day", "mothers day", "new years eve", "presidents day", "saint patricks day", "thanksgiving", "valentines day",
-			"veterans day" };
+			"veterans day" };	// Holidays
 	srand(time(NULL));			//NULL is a pointer.
 	int h = rand() % 12;
 	word = holiday[h];
@@ -64,7 +75,7 @@ int main() {
         }
     
 
-        string hide_h(word.length(), '-');
+        string hide_h(word.length(), '-');	//Makes the letters in the holdiday dashes.
         cout << "\n\n";
         while (tries != 0) {
             home_menu();
