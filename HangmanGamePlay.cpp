@@ -31,7 +31,8 @@ int main() {
 	word = holiday[h];
 
     // Welcome screen to ask user if they would like to play
-    cout << "Welcome to Hangman!" << endl;
+    cout << ANSI_COLOR_CYAN << "Welcome to Hangman!" << endl;
+	cout << ANSI_COLOR_RESET;
     cout << "Would you like to play a game? |Y/N|: ";
     cin >> choice;
     choice = toupper(choice);
@@ -47,6 +48,7 @@ int main() {
     }
     
     // Title
+	cout << ANSI_COLOR_YELLOW;
     cout << "           -";
 
     for (int i = 0; i < 15; i++) {
@@ -75,7 +77,7 @@ int main() {
     for (int i = 0; i < 16; i++) {
         cout << "-";
     }
-
+cout << ANSI_COLOR_RESET;
     string hide_h(word.length(), '-');	//Makes the letters in the holdiday dashes.
     cout << "\n\n";
     while (tries != 0) {
@@ -86,12 +88,12 @@ int main() {
         cin.get(letter);
         
         if (checkGuess(letter, word, hide_h) == 0) {
-            cout << "\nIncorrect letter.";
+            cout << ANSI_COLOR_RED << "\nIncorrect letter." << ANSI_COLOR_RESET;
             tries = tries - 1;
             
             // Loop for each wrong guess, a peice of the man is added
                 do {
-                    
+                    cout << ANSI_COLOR_YELLOW;
                     if (tries == 6) {
                         cout << "\n\n           -";
                         for (int i = 0; i < 15; i++ ) {
@@ -222,23 +224,23 @@ int main() {
                         }  
                     }
                 } while (tries == 7);
-                
+                cout << ANSI_COLOR_RESET;
         }
         
-        else cout << "\nCorrect! You guessed a letter";
+        else cout << ANSI_COLOR_GREEN << "\nCorrect! You guessed a letter";
     
         if (word == hide_h) {
             cout << "\nCongratulations! You guessed the word!";
             home_menu();
             cout << "\nThe word was: " << word << endl;
             break;
-        }
-    }
+        } cout << ANSI_COLOR_RESET;
+    }cout << ANSI_COLOR_RED;
     if (tries == 0) {
         cout << "\nOn no! Our friend has been hanged.";
         home_menu();
         cout << "\nThe word was: " << word << endl;
-    }
+    }cout << ANSI_COLOR_RESET;
 
 	cin.ignore();
 	cin.get();		//access the array
