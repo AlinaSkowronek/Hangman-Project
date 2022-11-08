@@ -13,6 +13,7 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include "Color.h"
 using namespace std;
 
 int tries = 7;
