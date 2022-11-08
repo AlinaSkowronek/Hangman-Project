@@ -34,7 +34,7 @@ int main() {
     cout << "Welcome to Hangman!" << endl;
     cout << "Would you like to play a game? |Y/N|: ";
     cin >> choice;
-    choice = toupper('y');
+    choice = toupper(choice);
 
     // if user types in 'Y' the directions will be displayed
     if (choice == 'Y') {
@@ -42,6 +42,8 @@ int main() {
         cout << "Your job is to guess the name of the holiday in 7 tries or less." << endl;
         cout << "If you use more than 7 tries, your friend will be hung!" << endl;
         cout << "Good luck :)\n" << endl;
+    } else {
+        return 0;
     }
     
     // Title
@@ -241,7 +243,8 @@ int main() {
 	cin.ignore();
 	cin.get();		//access the array
 	return 0;
-}
+    
+}   
 
 int checkGuess(char guess, string hiddenholiday, string& holidayguess) {
 	int matches = 0;
